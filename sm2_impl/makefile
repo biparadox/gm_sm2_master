@@ -11,7 +11,8 @@ OBJECTS=sm2.o sm3.o sm2_Intrfs_test.o
 CC=gcc
 CPP=g++
 
-CFLAGS  =  -I./   -fPIC -g -D_DEBUG
+#CFLAGS  =  -I./   -fPIC -g -D_DEBUG
+CFLAGS  =  -I./   -fPIC -g 
 
 all: $(LIBNAME)
 
