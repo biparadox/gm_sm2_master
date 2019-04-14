@@ -1583,7 +1583,7 @@ int GM_SM2Encrypt(unsigned char * encData, unsigned long * ulEncDataLen, unsigne
         }else {
             // gen rand k < n
             ret = genRand_k(&mp_rand_k, &mp_n);
-            MP_print(&mp_rand_k);
+           //MP_print(&mp_rand_k);
             CHECK_RET(ret);
         }
 #endif // _DEBUG	
