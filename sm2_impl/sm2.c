@@ -1525,6 +1525,15 @@ int GM_SM2Encrypt(unsigned char * encData, unsigned long * ulEncDataLen, unsigne
 		return ERR_PARAM;
 	}
 
+        if(ulEncDataLen<512)
+	{
+		memset(encData,0,ulEncDataLen);
+	}
+	else
+	{
+		memset(encData,0,512);
+	}	
+
 	unsigned char tmpX2Buff[100] = {0};unsigned long tmpX2Len = 100;
 	unsigned char tmpY2Buff[100] = {0};unsigned long tmpY2Len = 100;
 	unsigned char * ptmp = NULL;
